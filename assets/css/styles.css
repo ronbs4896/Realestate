@@ -1,7 +1,7 @@
 /* ===== Base ===== */
 :root {
-  --primary: #1f6feb;
-  --primary-dark: #1a5fcc;
+  --primary: #0D1B2A;
+  --primary-dark: #1c344d;
   --dark: #0d1b2a;
   --gray: #5b6b7b;
   --light: #f5f7fa;
@@ -110,29 +110,43 @@ a { text-decoration: none; color: inherit; }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-/* ===== Hero (split: image left, text right) ===== */
+/* ===== Hero (full-bleed image, text overlaid on the right) ===== */
 .hero {
-  display: flex;
-  min-height: 60vh;
-  background: #fff;
+  position: relative;
+  display: flex; align-items: center; justify-content: flex-start; /* RTL start = right */
+  min-height: 72vh;
+  overflow: hidden;
 }
-.hero-content {
-  flex: 0 0 40%;
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 0 6%;
-  color: var(--dark);
-}
-.hero-content h1 {
-  font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 900;
-  margin-bottom: 18px; line-height: 1.15;
-}
-.hero-content p { font-size: 1.15rem; color: var(--gray); margin-bottom: 30px; }
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .hero-media {
-  flex: 1;
+  position: absolute; inset: 0;
   background-size: cover; background-position: center;
   background-color: #dfe6ee;
 }
+/* צל/הכהיה על כל התמונה — כהה יותר בצד הכיתוב (ימין) ומתבהר שמאלה */
+.hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to left, rgba(13,27,42,0.78) 0%, rgba(13,27,42,0.45) 42%, rgba(13,27,42,0.22) 100%),
+    linear-gradient(rgba(13,27,42,0.12), rgba(13,27,42,0.12));
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 540px;
+  padding: 0 6%;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.35);
+}
+.hero-content h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900;
+  margin-bottom: 18px; line-height: 1.15;
+}
+.hero-content p { font-size: 1.15rem; color: rgba(255,255,255,0.92); margin-bottom: 30px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+/* כפתורים בהירים מעל התמונה הכהה */
+.hero .btn-primary { background: #fff; color: var(--dark); }
+.hero .btn-primary:hover { background: #eef1f5; }
+.hero .btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,0.7); }
+.hero .btn-outline:hover { background: rgba(255,255,255,0.15); color: #fff; }
 
 /* ===== Sections ===== */
 .section { padding: 90px 0; }
@@ -274,13 +288,13 @@ a { text-decoration: none; color: inherit; }
   padding: 56px 20px 40px;
 }
 .footer-logo { font-size: 1.7rem; font-weight: 900; color: #fff; }
-.footer-logo span { color: var(--primary); }
+.footer-logo span { color: #fff; }
 .footer-tagline { margin: 14px 0; color: #aab6c2; max-width: 320px; }
 .footer-company { color: #7e8c9a; font-size: 0.9rem; letter-spacing: 0.3px; }
 .footer-col h4 { color: #fff; font-size: 1.05rem; margin-bottom: 16px; }
 .footer-col a { display: block; color: #aab6c2; padding: 6px 0; transition: color 0.15s; }
 .footer-col a:hover { color: #fff; }
-.footer-cta { color: var(--primary) !important; font-weight: 700; margin-top: 8px; }
+.footer-cta { color: #fff !important; font-weight: 700; margin-top: 8px; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.08);
   text-align: center; padding: 20px; font-size: 0.9rem; color: #7e8c9a;
@@ -304,11 +318,14 @@ a { text-decoration: none; color: inherit; }
   .nav-toggle { display: flex; }
   .nav-cta { display: none; }
 
-  /* Hero נערם: תמונה למעלה, טקסט מתחת */
-  .hero { flex-direction: column-reverse; min-height: 0; }
-  .hero-media { height: 260px; flex: none; }
-  .hero-content { flex: none; padding: 40px 24px; text-align: center; }
+  /* Hero במובייל: טקסט ממורכז על התמונה */
+  .hero { min-height: 78vh; justify-content: center; }
+  .hero-content { max-width: 100%; padding: 0 24px; text-align: center; }
   .hero-actions { justify-content: center; }
+  /* הכהיה חזקה ואחידה יותר לקריאות במובייל */
+  .hero-overlay {
+    background: linear-gradient(rgba(13,27,42,0.55), rgba(13,27,42,0.55));
+  }
 
   .location-map { height: 300px; }
   .neighborhood { grid-template-columns: repeat(3, 1fr); gap: 22px; }
