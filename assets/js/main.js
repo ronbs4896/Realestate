@@ -16,7 +16,7 @@ function closeMenu() {
   toggle.setAttribute('aria-expanded', 'false');
 }
 
-// טיפול בשליחת טופס יצירת קשר (כרגע הדגמה — מחובר בהמשך לשרת/מייל)
+// טיפול בשליחת טופס יצירת קשר (כרגע הדגמה , מחובר בהמשך לשרת/מייל)
 function handleSubmit(event) {
   event.preventDefault();
   const form = event.target;
