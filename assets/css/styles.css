@@ -215,9 +215,29 @@ a { text-decoration: none; color: inherit; }
 }
 .form-consent input { margin-top: 3px; flex: 0 0 auto; width: 16px; height: 16px; cursor: pointer; }
 
-/* ===== Status grid ===== */
-.status-grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
-.status-grid .hl-num { font-size: 1.7rem; }
+/* ===== Status grid (dark navy cards) ===== */
+.status-lead {
+  max-width: 720px; margin: -30px auto 50px; text-align: center;
+  color: var(--gray); font-size: 1.05rem; line-height: 1.6;
+}
+.highlights.status-grid { grid-template-columns: repeat(2, 1fr); }
+.status-grid .highlight {
+  background: var(--dark); color: #fff;
+  border-top: 4px solid #f4ecd8;
+  box-shadow: var(--shadow);
+  padding: 32px 24px; text-align: center; gap: 10px;
+}
+.status-grid .hl-icon {
+  color: #f4ecd8; display: inline-flex;
+  align-items: center; justify-content: center; margin-bottom: 4px;
+}
+.status-grid .hl-icon svg { width: 30px; height: 30px; }
+.status-grid .hl-num { color: #fff; font-size: 1.7rem; }
+.status-grid .hl-label { color: #f4ecd8; font-weight: 600; }
+.status-grid .hl-desc {
+  color: rgba(255,255,255,0.82); font-size: 0.95rem;
+  line-height: 1.55; margin-top: 6px;
+}
 
 /* ===== Project split ===== */
 .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
@@ -391,6 +411,10 @@ a { text-decoration: none; color: inherit; }
   .highlights { gap: 12px; }
   .highlight { padding: 22px 12px; }
   .highlight .hl-num { font-size: 2rem; }
+  /* כרטיסי הסטטוס בטור אחד במובייל לקריאות */
+  .highlights.status-grid { grid-template-columns: 1fr; }
+  .status-grid .highlight { padding: 28px 22px; }
+  .status-lead { margin-top: 0; }
 }
 
 /* ===== Small phones ===== */
