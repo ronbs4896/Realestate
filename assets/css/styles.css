@@ -350,6 +350,9 @@ a { text-decoration: none; color: inherit; }
   .hero-content { max-width: 100%; padding: 0 24px; text-align: center; }
   .hero-content h1 { white-space: normal; }
   .hero-eyebrow { align-self: center; }
+  /* החלפת תמונות במובייל בלבד: header ⇄ פרויקט */
+  .hero-media { background-image: url('../images/tower-dusk.jpg') !important; }
+  .project-img { background-image: url('../images/hero.jpg') !important; }
   .hero-actions { justify-content: center; }
   /* הכהיה חזקה ואחידה יותר לקריאות במובייל */
   .hero-overlay {
