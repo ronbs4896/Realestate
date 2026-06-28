@@ -12,7 +12,7 @@
 
   <!-- Header / Navbar -->
   <header class="navbar">
-    <div class="container nav-inner">
+    <div class="nav-inner">
       <a href="#" class="logo">
         <!-- כשתעלה logo.png: החלף את השורה הבאה ב <img src="assets/images/logo.png" alt="ARC" height="34"> -->
         ARC<span> Residence</span>
@@ -22,6 +22,7 @@
         <a href="#gallery" onclick="closeMenu()">גלריה</a>
         <a href="#amenities" onclick="closeMenu()">מתחמי הדיירים</a>
         <a href="#lifestyle" onclick="closeMenu()">סביבת המגורים</a>
+        <a href="#location" onclick="closeMenu()">מיקום</a>
         <a href="#contact" onclick="closeMenu()">צור קשר</a>
       </nav>
       <a href="#contact" class="btn btn-primary nav-cta">לתיאום פגישה</a>
@@ -33,15 +34,15 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
+    <div class="hero-content">
       <h1>לחיות גבוה מעל הכל</h1>
       <p>ARC Residence — מגדל מגורים יוקרתי המתנשא בלב נוף ההרים. אדריכלות מודרנית, מפרט עשיר ונוף פתוח לכל כיוון.</p>
       <div class="hero-actions">
         <a href="#gallery" class="btn btn-primary">לצפייה בפרויקט</a>
-        <a href="#contact" class="btn btn-ghost">השאירו פרטים</a>
+        <a href="#contact" class="btn btn-outline">השאירו פרטים</a>
       </div>
     </div>
+    <div class="hero-media" style="background-image:url('assets/images/hero.jpg')"></div>
   </section>
 
   <!-- Project highlights -->
@@ -53,7 +54,7 @@
         <p class="project-lead">מגדל יוקרה שמגדיר מחדש את החיים בטבע — אדריכלות אייקונית, מרפסות מעוגלות ונוף שנפתח לכל כיוון.</p>
         <div class="highlights">
           <div class="highlight"><span class="hl-num">36</span><span>קומות מעל הנוף</span></div>
-          <div class="highlight"><span class="hl-num">3–5</span><span>חדרים לבחירה</span></div>
+          <div class="highlight"><span class="hl-num">גן–פנטהאוז</span><span>סוגי דירות</span></div>
           <div class="highlight"><span class="hl-num">360°</span><span>נוף הרים פתוח</span></div>
           <div class="highlight"><span class="hl-num">★</span><span>מפרט יוקרתי</span></div>
         </div>
@@ -146,6 +147,30 @@
     </div>
   </section>
 
+  <!-- Location -->
+  <section id="location" class="section section-alt">
+    <div class="container location-grid">
+      <div class="location-text">
+        <h2 class="section-title">מיקום פריים · Prime Location</h2>
+        <p class="location-address">📍 רחוב בורוכוב 49, ירושלים</p>
+        <p>מיקום מנצח בלב ירושלים — שילוב נדיר של שקט ונוף מצד אחד, ונגישות מלאה למרכז העיר, תחבורה, מסחר ובילוי מצד שני.</p>
+        <ul class="features">
+          <li>✔ דקות ממרכז העיר וצירי התנועה הראשיים</li>
+          <li>✔ קרבה לטבע, פארקים ושבילי הליכה</li>
+          <li>✔ מוסדות חינוך, מסחר ובתי קפה במרחק הליכה</li>
+        </ul>
+      </div>
+      <div class="location-map">
+        <iframe
+          title="מפת המיקום — בורוכוב 49, ירושלים"
+          src="https://www.google.com/maps?q=Borochov%20St%2049%2C%20Jerusalem&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section id="contact" class="section">
     <div class="container">
@@ -153,9 +178,19 @@
       <p class="section-subtitle">השאירו פרטים ונציג יחזור אליכם עם כל המידע</p>
       <form class="contact-form" onsubmit="return handleSubmit(event)">
         <input type="text" name="name" placeholder="שם מלא" required />
-        <input type="tel" name="phone" placeholder="טלפון" required />
-        <input type="email" name="email" placeholder="אימייל" />
-        <textarea name="message" placeholder="איזו דירה מעניינת אתכם?" rows="4"></textarea>
+        <input type="tel" name="phone" placeholder="מספר טלפון" required />
+        <input type="email" name="email" placeholder="כתובת מייל" required />
+        <select name="apartment" required>
+          <option value="" disabled selected>הדירה שמעניינת אותך</option>
+          <option>דירת גן</option>
+          <option>2 חדרים</option>
+          <option>3 חדרים</option>
+          <option>4 חדרים</option>
+          <option>5 חדרים</option>
+          <option>6 חדרים</option>
+          <option>מיני פנטהאוז</option>
+          <option>פנטהאוז</option>
+        </select>
         <button type="submit" class="btn btn-primary">שליחה</button>
       </form>
     </div>
