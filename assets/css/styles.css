@@ -12,6 +12,11 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* גלילה חלקה ואנימטית + ריווח מתחת ל-header הדביק */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 84px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
 body {
   font-family: "Birzia", "Segoe UI", "Heebo", Arial, sans-serif;
   color: var(--dark);
@@ -109,6 +114,47 @@ a { text-decoration: none; color: inherit; }
 .section-alt { background: var(--light); }
 .section-title { font-size: 2.1rem; font-weight: 900; text-align: center; }
 .section-subtitle { text-align: center; color: var(--gray); margin: 10px 0 50px; }
+.section-subtitle.light { color: rgba(255,255,255,0.7); }
+
+/* ===== Dark section (neighborhood) ===== */
+.section-dark { background: var(--dark); color: #fff; }
+.section-dark .section-title { color: #fff; }
+
+/* ===== Neighborhood icons ===== */
+.neighborhood {
+  display: grid; grid-template-columns: repeat(7, 1fr); gap: 18px;
+}
+.nb-item { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.nb-icon {
+  width: 84px; height: 84px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid #f4ecd8; color: #f4ecd8;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.nb-icon svg { width: 34px; height: 34px; }
+.nb-item:hover .nb-icon { transform: translateY(-4px); background: #f4ecd8; color: var(--dark); }
+.nb-label { font-weight: 500; font-size: 0.95rem; color: #e8edf2; }
+
+/* ===== Offer ===== */
+.offer-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+.offer-card {
+  background: #fff; border-radius: var(--radius); padding: 38px 30px;
+  box-shadow: var(--shadow); text-align: center;
+  border-top: 4px solid var(--primary);
+}
+.offer-num {
+  font-size: 3rem; font-weight: 900; color: var(--primary);
+  line-height: 1; margin-bottom: 16px;
+}
+.offer-num span { opacity: 0.4; font-weight: 500; }
+.offer-emoji { font-size: 2.6rem; }
+.offer-card h3 { font-size: 1.35rem; margin-bottom: 10px; }
+.offer-card p { color: var(--gray); }
+.offer-card strong { color: var(--dark); }
+
+/* ===== Status grid ===== */
+.status-grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.status-grid .hl-num { font-size: 1.7rem; }
 
 /* ===== Project split ===== */
 .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
@@ -197,7 +243,23 @@ a { text-decoration: none; color: inherit; }
 .contact-form select:invalid { color: var(--gray); }
 
 /* ===== Footer ===== */
-.footer { background: var(--dark); color: #cdd6e0; text-align: center; padding: 28px 0; }
+.footer { background: var(--dark); color: #cdd6e0; }
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1.4fr; gap: 40px;
+  padding: 56px 20px 40px;
+}
+.footer-logo { font-size: 1.7rem; font-weight: 900; color: #fff; }
+.footer-logo span { color: var(--primary); }
+.footer-tagline { margin: 14px 0; color: #aab6c2; max-width: 320px; }
+.footer-company { color: #7e8c9a; font-size: 0.9rem; letter-spacing: 0.3px; }
+.footer-col h4 { color: #fff; font-size: 1.05rem; margin-bottom: 16px; }
+.footer-col a { display: block; color: #aab6c2; padding: 6px 0; transition: color 0.15s; }
+.footer-col a:hover { color: #fff; }
+.footer-cta { color: var(--primary) !important; font-weight: 700; margin-top: 8px; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center; padding: 20px; font-size: 0.9rem; color: #7e8c9a;
+}
 
 /* ===== Responsive ===== */
 /* ===== Tablet ===== */
@@ -207,6 +269,8 @@ a { text-decoration: none; color: inherit; }
   .location-text .section-title { text-align: center; }
   .project-img { height: 340px; }
   .location-text { text-align: center; }
+  .neighborhood { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 
 /* ===== Mobile ===== */
@@ -222,6 +286,11 @@ a { text-decoration: none; color: inherit; }
   .hero-actions { justify-content: center; }
 
   .location-map { height: 300px; }
+  .neighborhood { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .nb-icon { width: 70px; height: 70px; }
+  .nb-icon svg { width: 28px; height: 28px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; text-align: center; padding: 44px 20px 32px; }
+  .footer-tagline { margin-inline: auto; }
 
   /* תפריט נפתח */
   .nav-links {
@@ -255,4 +324,5 @@ a { text-decoration: none; color: inherit; }
   .container { padding: 0 16px; }
   .logo { font-size: 1.3rem; }
   .hero-content h1 { font-size: 1.9rem; }
+  .neighborhood { grid-template-columns: repeat(2, 1fr); }
 }
