@@ -19,8 +19,9 @@
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="#project" onclick="closeMenu()">הפרויקט</a>
-        <a href="#gallery" onclick="closeMenu()">גלריה</a>
+        <a href="#neighborhood" onclick="closeMenu()">השכונה</a>
         <a href="#amenities" onclick="closeMenu()">מתחמי הדיירים</a>
+        <a href="#gallery" onclick="closeMenu()">גלריה</a>
         <a href="#location" onclick="closeMenu()">מיקום</a>
         <a href="#offer" onclick="closeMenu()">ההצעה</a>
         <a href="#status" onclick="closeMenu()">צפי הפרויקט</a>
@@ -67,36 +68,40 @@
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section id="gallery" class="section section-alt">
+  <!-- Neighborhood -->
+  <section id="neighborhood" class="section section-dark">
     <div class="container">
-      <h2 class="section-title">גלריה</h2>
-      <p class="section-subtitle">הצצה אל החיים ב-R&amp;R</p>
-
-      <div class="cards">
-        <article class="card">
-          <div class="card-img" style="background-image:url('assets/images/interior.jpg')"></div>
-          <div class="card-body">
-            <h3>דירות יוקרה</h3>
-            <p class="card-meta">חללים פתוחים, גימור עשיר ונוף שנכנס פנימה</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-img" style="background-image:url('assets/images/balcony.jpg')"></div>
-          <div class="card-body">
-            <h3>מרפסות עם נוף</h3>
-            <p class="card-meta">נוף הרים ירוק ופתוח מכל דירה</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-img" style="background-image:url('assets/images/plaza.jpg')"></div>
-          <div class="card-body">
-            <h3>כיכר הפרויקט</h3>
-            <p class="card-meta">מרחב ציבורי ירוק, מסחר ובילוי בלב הפרויקט</p>
-          </div>
-        </article>
+      <h2 class="section-title">השכונה סביב הפרויקט</h2>
+      <p class="section-subtitle light">כל מה שצריך לחיים מלאים — במרחק הליכה</p>
+      <div class="neighborhood">
+        <div class="nb-item">
+          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+          <span class="nb-label">מיקום אסטרטגי</span>
+        </div>
+        <div class="nb-item">
+          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11v4c0 1.2 3 2.6 6 2.6s6-1.4 6-2.6v-4"/></svg></span>
+          <span class="nb-label">קריית חינוך</span>
+        </div>
+        <div class="nb-item">
+          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="5" r="2"/><path d="M12 8v6M7 6l5 2 5-2M9 20l3-6 3 6"/></svg></span>
+          <span class="nb-label">גני ילדים</span>
+        </div>
+        <div class="nb-item">
+          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
+          <span class="nb-label">מסחר</span>
+        </div>
+        <div class="nb-item">
+          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 6 12h3l-3 5h12l-3-5h3L12 3z"/><path d="M12 17v4"/></svg></span>
+          <span class="nb-label">פארקים ירוקים</span>
+        </div>
+        <div class="nb-item">
+          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 7 1.5C19 15.5 12 20 12 20z"/></svg></span>
+          <span class="nb-label">קהילה</span>
+        </div>
+        <div class="nb-item">
+          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.4 5.4L20 9l-4 3.8 1 6L12 18l-5 .8 1-6L4 9l5.6-.6L12 3z"/></svg></span>
+          <span class="nb-label">פנאי</span>
+        </div>
       </div>
     </div>
   </section>
@@ -135,8 +140,42 @@
     </div>
   </section>
 
+  <!-- Gallery -->
+  <section id="gallery" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">גלריה</h2>
+      <p class="section-subtitle">הצצה אל החיים ב-R&amp;R</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-img" style="background-image:url('assets/images/interior.jpg')"></div>
+          <div class="card-body">
+            <h3>דירות יוקרה</h3>
+            <p class="card-meta">חללים פתוחים, גימור עשיר ונוף שנכנס פנימה</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img" style="background-image:url('assets/images/balcony.jpg')"></div>
+          <div class="card-body">
+            <h3>מרפסות עם נוף</h3>
+            <p class="card-meta">נוף הרים ירוק ופתוח מכל דירה</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img" style="background-image:url('assets/images/plaza.jpg')"></div>
+          <div class="card-body">
+            <h3>כיכר הפרויקט</h3>
+            <p class="card-meta">מרחב ציבורי ירוק, מסחר ובילוי בלב הפרויקט</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- Lifestyle / About -->
-  <section id="lifestyle" class="section section-alt">
+  <section id="lifestyle" class="section">
     <div class="container about-grid">
       <div class="about-img" style="background-image:url('assets/images/lifestyle.jpg')"></div>
       <div class="about-text">
@@ -176,46 +215,8 @@
     </div>
   </section>
 
-  <!-- Neighborhood -->
-  <section id="neighborhood" class="section section-dark">
-    <div class="container">
-      <h2 class="section-title">השכונה סביב הפרויקט</h2>
-      <p class="section-subtitle light">כל מה שצריך לחיים מלאים — במרחק הליכה</p>
-      <div class="neighborhood">
-        <div class="nb-item">
-          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
-          <span class="nb-label">מיקום אסטרטגי</span>
-        </div>
-        <div class="nb-item">
-          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11v4c0 1.2 3 2.6 6 2.6s6-1.4 6-2.6v-4"/></svg></span>
-          <span class="nb-label">קריית חינוך</span>
-        </div>
-        <div class="nb-item">
-          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="5" r="2"/><path d="M12 8v6M7 6l5 2 5-2M9 20l3-6 3 6"/></svg></span>
-          <span class="nb-label">גני ילדים</span>
-        </div>
-        <div class="nb-item">
-          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
-          <span class="nb-label">מסחר</span>
-        </div>
-        <div class="nb-item">
-          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 6 12h3l-3 5h12l-3-5h3L12 3z"/><path d="M12 17v4"/></svg></span>
-          <span class="nb-label">פארקים ירוקים</span>
-        </div>
-        <div class="nb-item">
-          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 7 1.5C19 15.5 12 20 12 20z"/></svg></span>
-          <span class="nb-label">קהילה</span>
-        </div>
-        <div class="nb-item">
-          <span class="nb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.4 5.4L20 9l-4 3.8 1 6L12 18l-5 .8 1-6L4 9l5.6-.6L12 3z"/></svg></span>
-          <span class="nb-label">פנאי</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Offer -->
-  <section id="offer" class="section section-alt">
+  <section id="offer" class="section">
     <div class="container">
       <h2 class="section-title">ההצעה</h2>
       <p class="section-subtitle">פריסייל — הכניסה המוקדמת, במחיר המוקדם</p>
@@ -240,7 +241,7 @@
   </section>
 
   <!-- Project status / forecast -->
-  <section id="status" class="section">
+  <section id="status" class="section section-alt">
     <div class="container">
       <h2 class="section-title">צפי הפרויקט</h2>
       <p class="section-subtitle">הפרויקט יוצא לדרך — וכל הבטחונות כבר כאן</p>
