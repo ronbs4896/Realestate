@@ -308,6 +308,7 @@ a { text-decoration: none; color: inherit; }
 /* ===== Footer ===== */
 .footer { background: var(--dark); color: #cdd6e0; }
 .footer-grid {
+  direction: rtl;
   display: grid; grid-template-columns: 2fr 1fr 1.4fr; gap: 40px;
   width: 100%; max-width: none;
   padding: 56px 40px 40px;
