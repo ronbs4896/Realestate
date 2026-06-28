@@ -238,8 +238,8 @@ a { text-decoration: none; color: inherit; }
   align-items: center; justify-content: center; margin-bottom: 2px;
 }
 .status-grid .hl-icon svg { width: 30px; height: 30px; }
-.status-grid .hl-num { color: #fff; font-size: 1.7rem; }
-.status-grid .hl-label { color: #f4ecd8; font-weight: 600; }
+.status-grid .highlight .hl-num { color: #fff; font-size: 1.6rem; line-height: 1.15; }
+.status-grid .highlight .hl-label { color: #f4ecd8; font-weight: 600; line-height: 1.2; }
 .status-grid .hl-desc {
   color: rgba(255,255,255,0.82); font-size: 0.95rem;
   line-height: 1.55; margin-top: 6px;
