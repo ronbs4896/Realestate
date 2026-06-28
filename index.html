@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ARC Residence | מגדל יוקרה בלב הטבע</title>
   <meta name="description" content="ARC Residence — מגדל מגורים יוקרתי המשלב אדריכלות מודרנית עם נוף הרים עוצר נשימה. דירות יוקרה למכירה." />
+  <link rel="stylesheet" href="assets/css/fonts.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -19,6 +20,7 @@
       <nav class="nav-links">
         <a href="#project">הפרויקט</a>
         <a href="#gallery">גלריה</a>
+        <a href="#amenities">מתחמי הדיירים</a>
         <a href="#lifestyle">סביבת המגורים</a>
         <a href="#contact">צור קשר</a>
       </nav>
@@ -41,14 +43,17 @@
 
   <!-- Project highlights -->
   <section id="project" class="section">
-    <div class="container">
-      <h2 class="section-title">הפרויקט</h2>
-      <p class="section-subtitle">מגדל יוקרה שמגדיר מחדש את החיים בטבע</p>
-      <div class="highlights">
-        <div class="highlight"><span class="hl-num">36</span><span>קומות מעל הנוף</span></div>
-        <div class="highlight"><span class="hl-num">3–5</span><span>חדרים לבחירה</span></div>
-        <div class="highlight"><span class="hl-num">360°</span><span>נוף הרים פתוח</span></div>
-        <div class="highlight"><span class="hl-num">★</span><span>מפרט יוקרתי</span></div>
+    <div class="container project-grid">
+      <div class="project-img" style="background-image:url('assets/images/tower-dusk.jpg')"></div>
+      <div class="project-text">
+        <h2 class="section-title">הפרויקט</h2>
+        <p class="project-lead">מגדל יוקרה שמגדיר מחדש את החיים בטבע — אדריכלות אייקונית, מרפסות מעוגלות ונוף שנפתח לכל כיוון.</p>
+        <div class="highlights">
+          <div class="highlight"><span class="hl-num">36</span><span>קומות מעל הנוף</span></div>
+          <div class="highlight"><span class="hl-num">3–5</span><span>חדרים לבחירה</span></div>
+          <div class="highlight"><span class="hl-num">360°</span><span>נוף הרים פתוח</span></div>
+          <div class="highlight"><span class="hl-num">★</span><span>מפרט יוקרתי</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -87,8 +92,42 @@
     </div>
   </section>
 
+  <!-- Amenities -->
+  <section id="amenities" class="section">
+    <div class="container">
+      <h2 class="section-title">מתחמי הדיירים</h2>
+      <p class="section-subtitle">שירותי בוטיק בלעדיים לדיירי הבניין</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-img" style="background-image:url('assets/images/lobby.jpg')"></div>
+          <div class="card-body">
+            <h3>לובי כניסה מפואר</h3>
+            <p class="card-meta">קבלה מאויישת ועיצוב יוקרתי בכניסה</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img" style="background-image:url('assets/images/lounge.jpg')"></div>
+          <div class="card-body">
+            <h3>טרקלין וספרייה</h3>
+            <p class="card-meta">מרחב אירוח, עבודה ומפגש עם קמין</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img" style="background-image:url('assets/images/gym.jpg')"></div>
+          <div class="card-body">
+            <h3>חדר כושר</h3>
+            <p class="card-meta">חדר כושר מאובזר לדיירי הבניין בלבד</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- Lifestyle / About -->
-  <section id="lifestyle" class="section">
+  <section id="lifestyle" class="section section-alt">
     <div class="container about-grid">
       <div class="about-img" style="background-image:url('assets/images/lifestyle.jpg')"></div>
       <div class="about-text">
@@ -105,7 +144,7 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section section-alt">
+  <section id="contact" class="section">
     <div class="container">
       <h2 class="section-title">מתעניינים?</h2>
       <p class="section-subtitle">השאירו פרטים ונציג יחזור אליכם עם כל המידע</p>

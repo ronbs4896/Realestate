@@ -1,0 +1,37 @@
+/* ===== Birzia Font Family ===== */
+@font-face {
+  font-family: "Birzia";
+  src: url("../fonts/Birzia-Light.woff2") format("woff2"),
+       url("../fonts/Birzia-Light.woff") format("woff"),
+       url("../fonts/Birzia-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Birzia";
+  src: url("../fonts/Birzia-Medium.woff2") format("woff2"),
+       url("../fonts/Birzia-Medium.woff") format("woff"),
+       url("../fonts/Birzia-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Birzia";
+  src: url("../fonts/Birzia-Bold.woff2") format("woff2"),
+       url("../fonts/Birzia-Bold.woff") format("woff"),
+       url("../fonts/Birzia-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Birzia";
+  src: url("../fonts/Birzia-Black.woff2") format("woff2"),
+       url("../fonts/Birzia-Black.woff") format("woff"),
+       url("../fonts/Birzia-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
