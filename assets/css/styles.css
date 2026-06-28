@@ -52,25 +52,50 @@ a { text-decoration: none; color: inherit; }
 .btn-outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
 .btn-outline:hover { background: var(--primary); color: #fff; }
 
-/* ===== Navbar ===== */
+/* ===== Navbar (full-width, 3-column grid) ===== */
 .navbar {
   position: sticky; top: 0; z-index: 100;
+  width: 100%;
+  direction: rtl;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
 }
 .nav-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  height: 70px;
   width: 100%;
-  padding: 0 40px;
+  max-width: none;
+  height: 70px;
+  padding-inline: 40px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;   /* RTL: logo (right) · nav (center) · action (left) */
+  align-items: center;
 }
-.logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); }
+.logo {
+  justify-self: start;        /* RTL start = right */
+  font-size: 1.5rem; font-weight: 800; color: var(--dark);
+}
 .logo span { color: var(--primary); }
-.nav-links { display: flex; gap: 28px; }
+.nav-links {
+  display: flex; justify-content: center; align-items: center;
+  gap: 32px; flex-wrap: nowrap; white-space: nowrap;
+}
 .nav-links a { color: var(--gray); font-weight: 500; transition: color 0.15s; }
 .nav-links a:hover { color: var(--primary); }
+.nav-action {
+  justify-self: end;          /* RTL end = left */
+  display: flex; align-items: center; gap: 12px;
+}
 .nav-cta { padding: 9px 20px; }
+
+/* מרווח גדול יותר במסכים רחבים במיוחד */
+@media (min-width: 1600px) { .nav-inner { padding-inline: 60px; } }
+
+/* טאבלט / מסכי מחשב קטנים — צמצום מרווחים, ללא שבירת שורה */
+@media (max-width: 1100px) {
+  .nav-inner { padding-inline: 24px; }
+  .nav-links { gap: 20px; }
+  .nav-links a { font-size: 0.95rem; }
+}
 
 /* Hamburger toggle (mobile only) */
 .nav-toggle {
@@ -275,7 +300,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
-  .nav-inner { padding: 0 20px; }
+  .nav-inner { padding-inline: 16px; }
   .nav-toggle { display: flex; }
   .nav-cta { display: none; }
 
