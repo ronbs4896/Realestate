@@ -40,10 +40,11 @@
     <div class="hero-media" style="background-image:url('assets/images/hero.jpg')"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
+      <span class="hero-eyebrow">פריסייל · מחירי השקה מוקדמים</span>
       <h1>לחיות גבוה מעל הכל</h1>
-      <p>R&amp;R Residence — מגדל מגורים יוקרתי המתנשא בלב נוף ההרים. אדריכלות מודרנית, מפרט עשיר ונוף פתוח לכל כיוון.</p>
+      <p>מגדל היוקרה של R&amp;R בלב ירושלים — עכשיו בשלב הפריסייל. זו ההזדמנות להיכנס מוקדם, במחיר מוקדם, אל הבית שתמיד רצית.</p>
       <div class="hero-actions">
-        <a href="#gallery" class="btn btn-primary">לצפייה בפרויקט</a>
+        <a href="#offer" class="btn btn-primary">למה עכשיו?</a>
         <a href="#contact" class="btn btn-outline">השאירו פרטים</a>
       </div>
     </div>
@@ -55,7 +56,7 @@
       <div class="project-img" style="background-image:url('assets/images/tower-dusk.jpg')"></div>
       <div class="project-text">
         <h2 class="section-title">הפרויקט</h2>
-        <p class="project-lead">מגדל יוקרה שמגדיר מחדש את החיים בטבע — אדריכלות אייקונית, מרפסות מעוגלות ונוף שנפתח לכל כיוון.</p>
+        <p class="project-lead">30 קומות שמגדירות מחדש את קו הרקיע של ירושלים. אדריכלות אייקונית, מרפסות פתוחות לנוף ומפרט יוקרתי — והכל בשלב שמאפשר לכם להיכנס לפני כולם.</p>
         <div class="highlights">
           <div class="highlight"><span class="hl-num">30</span><span>קומות מעל הנוף</span></div>
           <div class="highlight"><span class="hl-num">גן–פנטהאוז</span><span>סוגי דירות</span></div>
@@ -217,8 +218,13 @@
   <section id="offer" class="section section-alt">
     <div class="container">
       <h2 class="section-title">ההצעה</h2>
-      <p class="section-subtitle">תנאי רכישה גמישים — גם למשקיעים</p>
+      <p class="section-subtitle">פריסייל — הכניסה המוקדמת, במחיר המוקדם</p>
       <div class="offer-cards">
+        <article class="offer-card offer-card--feature">
+          <div class="offer-num offer-emoji">🏷️</div>
+          <h3>מחירי פריסייל</h3>
+          <p>נכנסים עכשיו, בשלב הפריסייל — ב<strong>מחירי השקה מוקדמים</strong>, לפני שהמחירים מטפסים עם התקדמות הבנייה. המקום הנכון, בזמן הנכון.</p>
+        </article>
         <article class="offer-card">
           <div class="offer-num">10<span>/</span>90</div>
           <h3>מימון בתנאי 10/90</h3>
@@ -226,7 +232,7 @@
         </article>
         <article class="offer-card">
           <div class="offer-num offer-emoji">🔁</div>
-          <h3>גמישות מלאה למשקיע</h3>
+          <h3>גמישות מלאה</h3>
           <p>אפשרות למכור את הנכס — או את הזכות לדירה — עוד במהלך תקופת הבנייה, וליהנות מעליית הערך.</p>
         </article>
       </div>
@@ -237,7 +243,7 @@
   <section id="status" class="section">
     <div class="container">
       <h2 class="section-title">צפי הפרויקט</h2>
-      <p class="section-subtitle">סטטוס ובטחונות — שקט נפשי מלא</p>
+      <p class="section-subtitle">הפרויקט יוצא לדרך — וכל הבטחונות כבר כאן</p>
       <div class="highlights status-grid">
         <div class="highlight"><span class="hl-num">5 שנים</span><span>צפי אכלוס</span></div>
         <div class="highlight"><span class="hl-num">בנק מזרחי</span><span>ערבות חוק מכר</span></div>
@@ -250,8 +256,8 @@
   <!-- Contact -->
   <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title">מתעניינים?</h2>
-      <p class="section-subtitle">השאירו פרטים ונציג יחזור אליכם עם כל המידע</p>
+      <h2 class="section-title">רוצים להיכנס בשלב הפריסייל?</h2>
+      <p class="section-subtitle">השאירו פרטים ונחזור אליכם עם כל המידע — לפני כולם</p>
       <form class="contact-form" onsubmit="return handleSubmit(event)">
         <input type="text" name="name" placeholder="שם מלא" required />
         <input type="tel" name="phone" placeholder="מספר טלפון" required />
@@ -267,6 +273,10 @@
           <option>מיני פנטהאוז</option>
           <option>פנטהאוז</option>
         </select>
+        <label class="form-consent">
+          <input type="checkbox" name="consent" />
+          <span>אני מאשר/ת קבלת דבר פרסום, עדכונים ומבצעים על הפרויקט באמצעות דוא"ל, מסרונים ושיחות טלפון.</span>
+        </label>
         <button type="submit" class="btn btn-primary">שליחה</button>
       </form>
     </div>
@@ -274,7 +284,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-grid">
+    <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">R&amp;R<span> Residence</span></div>
         <p class="footer-tagline">מגדל יוקרה בלב הטבע — לחיות גבוה מעל הכל.</p>
@@ -299,9 +309,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="container">
-        © <span id="year"></span> R&amp;R Residence · כל הזכויות שמורות
-      </div>
+      © <span id="year"></span> R&amp;R Residence · כל הזכויות שמורות
     </div>
   </footer>
 
