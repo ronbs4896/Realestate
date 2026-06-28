@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>נדל"ן | מציאת הבית המושלם עבורך</title>
+  <meta name="description" content="חברת נדל\"ן מובילה — מציאת דירות, בתים ונכסים להשקעה בהתאמה אישית." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <!-- כשתעלה לוגו: החלף את הטקסט בתגית <img src="assets/images/logo.png" alt="לוגו"> -->
+        נדל"ן<span>פרו</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#properties">נכסים</a>
+        <a href="#about">עלינו</a>
+        <a href="#contact">צור קשר</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary nav-cta">דברו איתנו</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>הבית הבא שלך מתחיל כאן</h1>
+      <p>אנחנו מתאימים לך את הנכס המושלם — דירות, בתים והשקעות נדל"ן בכל הארץ.</p>
+      <div class="hero-actions">
+        <a href="#properties" class="btn btn-primary">לצפייה בנכסים</a>
+        <a href="#contact" class="btn btn-ghost">קבעו פגישה</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties / Gallery -->
+  <section id="properties" class="section">
+    <div class="container">
+      <h2 class="section-title">נכסים נבחרים</h2>
+      <p class="section-subtitle">מבחר נכסים שאספנו עבורך</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-img" style="background-image:url('assets/images/property-1.jpg')"></div>
+          <div class="card-body">
+            <h3>דירת 4 חדרים — תל אביב</h3>
+            <p class="card-meta">95 מ"ר · קומה 5 · מרפסת שמש</p>
+            <p class="card-price">₪3,200,000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img" style="background-image:url('assets/images/property-2.jpg')"></div>
+          <div class="card-body">
+            <h3>בית פרטי — הרצליה</h3>
+            <p class="card-meta">220 מ"ר · גינה · 6 חדרים</p>
+            <p class="card-price">₪7,500,000</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img" style="background-image:url('assets/images/property-3.jpg')"></div>
+          <div class="card-body">
+            <h3>דירת השקעה — חיפה</h3>
+            <p class="card-meta">60 מ"ר · תשואה 5% · משופצת</p>
+            <p class="card-price">₪1,150,000</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section-alt">
+    <div class="container about-grid">
+      <div class="about-img" style="background-image:url('assets/images/about.jpg')"></div>
+      <div class="about-text">
+        <h2 class="section-title">קצת עלינו</h2>
+        <p>אנחנו צוות אנשי נדל"ן עם ניסיון של שנים בשוק הישראלי. המטרה שלנו פשוטה — להתאים לך את הנכס הנכון, במחיר הנכון, בלי כאב ראש.</p>
+        <ul class="features">
+          <li>✔ ליווי אישי מההתחלה ועד מסירת המפתח</li>
+          <li>✔ מאגר נכסים בלעדי</li>
+          <li>✔ שקיפות מלאה לאורך כל הדרך</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">צרו קשר</h2>
+      <p class="section-subtitle">השאירו פרטים ונחזור אליכם בהקדם</p>
+      <form class="contact-form" onsubmit="return handleSubmit(event)">
+        <input type="text" name="name" placeholder="שם מלא" required />
+        <input type="tel" name="phone" placeholder="טלפון" required />
+        <input type="email" name="email" placeholder="אימייל" />
+        <textarea name="message" placeholder="מה אתם מחפשים?" rows="4"></textarea>
+        <button type="submit" class="btn btn-primary">שליחה</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> נדל"ןפרו · כל הזכויות שמורות</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
