@@ -63,6 +63,19 @@ a { text-decoration: none; color: inherit; }
 .nav-links a:hover { color: var(--primary); }
 .nav-cta { padding: 9px 20px; }
 
+/* Hamburger toggle (mobile only) */
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 6px;
+}
+.nav-toggle span {
+  width: 26px; height: 3px; background: var(--dark);
+  border-radius: 2px; transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
 /* ===== Hero ===== */
 .hero {
   position: relative;
@@ -153,8 +166,48 @@ a { text-decoration: none; color: inherit; }
 .footer { background: var(--dark); color: #cdd6e0; text-align: center; padding: 28px 0; }
 
 /* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .about-grid, .project-grid { grid-template-columns: 1fr; }
+/* ===== Tablet ===== */
+@media (max-width: 900px) {
+  .about-grid, .project-grid { grid-template-columns: 1fr; gap: 32px; }
   .about-text .section-title, .project-text .section-title { text-align: center; }
+  .project-img { height: 340px; }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-cta { display: none; }
+
+  /* תפריט נפתח */
+  .nav-links {
+    position: absolute; top: 70px; right: 0; left: 0;
+    flex-direction: column; gap: 0; align-items: stretch;
+    background: #fff; box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nav-links.open { max-height: 340px; }
+  .nav-links a {
+    padding: 15px 22px; border-top: 1px solid #eef1f5;
+    font-size: 1.05rem;
+  }
+
+  .section { padding: 56px 0; }
+  .section-title { font-size: 1.7rem; }
+  .hero { min-height: 78vh; }
+  .hero-content p { font-size: 1.05rem; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; text-align: center; }
+
+  .project-img, .about-img { height: 240px; }
+  .highlights { gap: 12px; }
+  .highlight { padding: 22px 12px; }
+  .highlight .hl-num { font-size: 2rem; }
+}
+
+/* ===== Small phones ===== */
+@media (max-width: 400px) {
+  .container { padding: 0 16px; }
+  .logo { font-size: 1.3rem; }
+  .hero-content h1 { font-size: 1.9rem; }
 }

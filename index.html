@@ -17,14 +17,17 @@
         <!-- כשתעלה logo.png: החלף את השורה הבאה ב <img src="assets/images/logo.png" alt="ARC" height="34"> -->
         ARC<span> Residence</span>
       </a>
-      <nav class="nav-links">
-        <a href="#project">הפרויקט</a>
-        <a href="#gallery">גלריה</a>
-        <a href="#amenities">מתחמי הדיירים</a>
-        <a href="#lifestyle">סביבת המגורים</a>
-        <a href="#contact">צור קשר</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#project" onclick="closeMenu()">הפרויקט</a>
+        <a href="#gallery" onclick="closeMenu()">גלריה</a>
+        <a href="#amenities" onclick="closeMenu()">מתחמי הדיירים</a>
+        <a href="#lifestyle" onclick="closeMenu()">סביבת המגורים</a>
+        <a href="#contact" onclick="closeMenu()">צור קשר</a>
       </nav>
       <a href="#contact" class="btn btn-primary nav-cta">לתיאום פגישה</a>
+      <button class="nav-toggle" id="navToggle" aria-label="פתיחת תפריט" aria-expanded="false" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
